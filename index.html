@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de Contact</title>
+</head>
+<body>
+    <h1>Contactez-nous</h1>
+    <form id="contact-form">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+        const form = document.forms['contact-form']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert('Formulaire soumis avec succès!'))
+                .catch(error => console.error('Erreur!', error.message))
+        })
+    </script>
+</body>
+</html>
