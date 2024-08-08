@@ -5,21 +5,21 @@
 </head>
 <body>
     <h1>Contactez-nous</h1>
-    <form id="contact-form">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJYyJyY6khYSgJ6f9Jg57a_EzXb_q0lqAIrJ4TrB9Bzjm8oA/formResponse" id="contact-form">
+        <label for="entry.851903011">Nom :</label>
+        <input type="text" id="name" name="entry.851903011" required><br><br>
     
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="emailAddres">Email :</label>
+        <input type="email" id="email" name="emailAddress" required><br><br>
         
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea><br><br>
+        <label for="dlut">Message :</label>
+        <textarea id="message" name="dlut" value="1723130666811" required></textarea><br><br>
         
         <input type="submit" value="Envoyer">
     </form>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby6ohG1x9mfi1vnsgwWV35kAPkUTyxe2ooAzW8oG0WbeGSkDlAmuQ9ZYCltfNBzXsAmBA/exec'
+        const scriptURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJYyJyY6khYSgJ6f9Jg57a_EzXb_q0lqAIrJ4TrB9Bzjm8oA/formResponse'
         const form = document.forms['contact-form']
         
         form.addEventListener('submit', e => {
